@@ -69,62 +69,76 @@
 					</section>
 
 				<!-- Our Services -->
-					<section id="ourservices" class="two">
-						<div class="container">
-
-							<header>
-								<h2>Our Services</h2>
-							</header>
-
-							<p>At SE Group Inc., we are dedicated to delivering innovative, high-impact solutions that empower businesses to thrive in today's digital landscape. Our services range from advanced AI and machine learning systems to cybersecurity solutions, ensuring that your organization remains at the forefront of technological advancement. Whether you're looking to optimize your operations or enhance security, we have the expertise and tools to help you achieve your goals.</p>
-
-							<div class="row">
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-										<header>
-											<h3>Artificial Intelligence</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-										<header>
-											<h3>Data Science</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-										<header>
-											<h3>Cybersecurity</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-										<header>
-											<h3>Cloud Infrastructure</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-										<header>
-											<h3>Data Analytics</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-										<header>
-											<h3>Custom Software Solutions</h3>
-										</header>
-									</article>
+				<section id="ourservices" class="two">
+					<div class="container">
+						<header>
+							<h2>Our Services</h2>
+						</header>
+						<p>At SE Group Inc., we are dedicated to delivering innovative, high-impact solutions that empower businesses to thrive in today's digital landscape.</p>
+				
+						<div class="accordion">
+							<div class="accordion-item">
+								<h3 class="accordion-header">Data Science Services</h3>
+								<div class="accordion-body">
+									<p>Unlock the power of your data with comprehensive data science solutions that transform raw data into actionable insights.</p>
+									<ul>
+										<li>Data Analytics & Visualization</li>
+										<li>Predictive Modeling</li>
+										<li>Big Data Solutions</li>
+										<li>Custom Data Solutions</li>
+										<li>Data Integration & Automation</li>
+									</ul>
 								</div>
 							</div>
-
+				
+							<div class="accordion-item">
+								<h3 class="accordion-header">Cybersecurity Services</h3>
+								<div class="accordion-body">
+									<p>Protect your business from evolving cyber threats with end-to-end security solutions.</p>
+									<ul>
+										<li>Threat Detection & Prevention</li>
+										<li>Vulnerability Assessment & Penetration Testing</li>
+										<li>Network Security & Monitoring</li>
+										<li>Incident Response & Recovery</li>
+										<li>Security Audits & Compliance</li>
+										<li>Data Encryption & Secure Access</li>
+									</ul>
+								</div>
+							</div>
+				
+							<div class="accordion-item">
+								<h3 class="accordion-header">AI/ML Services</h3>
+								<div class="accordion-body">
+									<p>Leverage AI and ML to drive smarter decision-making, automate processes, and gain valuable insights.</p>
+									<ul>
+										<li>Custom AI Solutions</li>
+										<li>Machine Learning Models</li>
+										<li>Natural Language Processing (NLP)</li>
+										<li>AI-Powered Automation</li>
+										<li>Predictive Analytics</li>
+										<li>Computer Vision</li>
+									</ul>
+								</div>
+							</div>
+				
+							<div class="accordion-item">
+								<h3 class="accordion-header">Software Development Services</h3>
+								<div class="accordion-body">
+									<p>Building customized, high-performance software solutions for the future.</p>
+									<ul>
+										<li>Custom Software Development</li>
+										<li>Web & Mobile App Development</li>
+										<li>Enterprise Software Solutions</li>
+										<li>API & System Integration</li>
+										<li>Cloud Application Development</li>
+										<li>Software Maintenance & Support</li>
+									</ul>
+								</div>
+							</div>
 						</div>
-					</section>
+					</div>
+				</section>
+				
 
 				<!-- About Us -->
 					<section id="aboutus" class="three">
@@ -195,4 +209,17 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+	<script>
+		document.querySelectorAll('.accordion-header').forEach(header => {
+			header.addEventListener('click', function() {
+				const active = this.classList.contains('active');
+				document.querySelectorAll('.accordion-header').forEach(h => h.classList.remove('active'));
+				document.querySelectorAll('.accordion-body').forEach(b => b.style.display = 'none');
+				if (!active) {
+					this.classList.add('active');
+					this.nextElementSibling.style.display = 'block';
+				}
+			});
+		});
+	</script>	
 </html>
