@@ -212,6 +212,19 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				document.addEventListener('DOMContentLoaded', function() {
+					// Check for status parameter in URL
+					const urlParams = new URLSearchParams(window.location.search);
+					const status = urlParams.get('status');
+					
+					if (status === 'success') {
+						alert('Thank you! Your message has been sent successfully.');
+					} else if (status === 'error') {
+						alert('Sorry, there was an error sending your message. Please try again.');
+					}
+				});
+				</script>
 
 	</body>
 	<script>
